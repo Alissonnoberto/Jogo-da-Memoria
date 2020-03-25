@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    
+    <!--configurando a página parar ser renderizada em qualquer versão do Internet Explore -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- adicionando a viewport-->   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Titulo da Página -->
+    <title>Jogo da Mémoria</title>
+    
+    <!--linkando a fonte feita no google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Mali|Condiment|Bungee" rel="stylesheet">
+    
+    <!-- estilos de CSS são interpretados da mesma forma, em qualquer navegador-->
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+
+    <!-- linkando Fonte Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/solid.css" integrity="sha384-osqezT+30O6N/vsMqwW8Ch6wKlMofqueuia2H7fePy42uC05rm1G+BUPSd2iBSJL"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I"
+        crossorigin="anonymous">
+        
+    <!-- linkando Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
+     <!--linkando o css criado ao html-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>jogo da memoria</h1>
+    </header>
+
+    <button id="start">Iniciar Jogo</button>
+
+    <main>
+        <div id="info-top">
+            <span>Palpites </span><span id="guesses">0</span>
+            <span id="clock">00:00:00</span>
+            <span>Acertos</span><span id="hits">0</span>
+        </div>
+
+        <div id="board" class="animated zoomIn">
+            <article class="board-row">
+                <i class="card fas" id="1"></i>
+                <i class="card fas" id="2"></i>
+                <i class="card fas" id="3"></i>
+                <i class="card fas" id="4"></i>
+            </article>
+            <article class="board-row">
+                <i class="card fas" id="5"></i>
+                <i class="card fas" id="6"></i>
+                <i class="card fas" id="7"></i>
+                <i class="card fas" id="8"></i>
+            </article>
+            <article class="board-row">
+                <i class="card fas" id="9"></i>
+                <i class="card fas" id="10"></i>
+                <i class="card fas" id="11"></i>
+                <i class="card fas" id="12"></i>
+            </article>
+            <article class="board-row">
+                <i class="card fas" id="13"></i>
+                <i class="card fas" id="14"></i>
+                <i class="card fas" id="15"></i>
+                <i class="card fas" id="16"></i>
+            </article>
+            <div id="info-down">
+                <button id="reset">Reiniciar: <i class="fas fa fa-undo-alt"></i></button>
+                <button id="hint">Mostrar um par: <i class="fas fa fa-eye"></i></button>
+            </div>
+    </main>
+
+    <!-- crianção "fim de jogo"-->
+    <div id="win-model" class="model">
+        <span id="model-close">✖</span>
+        <div id="model-content">
+            <h4>Parabéns!</h4>
+            <p>Você encontrou todos os pares!!</p>
+            <p>Seu tempo foi de: <span id="conclusion-time"></span></p>
+            <p>Classificação: <span id="quality">
+                                <i class="fas fa fa-star"></i>
+                                <i class="fas fa fa-star"></i>
+                                <i class="fas fa fa-star"></i>
+                            </span>
+            </p>
+        </div>
+    </div>
+    <!-- linkando o  javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
